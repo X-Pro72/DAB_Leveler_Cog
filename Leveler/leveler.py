@@ -189,14 +189,14 @@ class Leveler(commands.Cog):
         draw.text((10, 220), ldb_str, fill="white", font=font3)
         draw.text((10, 260), rank_str, fill="white", font=font3)
         nick = user.display_name
-        if font2.getsize(nick)[0] > 150:
+        if font2.getbbox(nick)[0] > 150:
             nick = nick[:15] + "..."
 
         draw.text((154, 316), f"{lprc}%", fill=usercolor, font=font1)
         draw.text((100, 360), (prog_str + f" {xp}/{nxp}"), fill=usercolor, font=font1)
-        draw.text(((font3.getsize(lvl_str)[0] + 20), 180), f"{lvl}", fill=usercolor, font=font3)
-        draw.text(((font3.getsize(ldb_str)[0] + 20), 220), f"{ldb}", fill=usercolor, font=font3)
-        draw.text(((font3.getsize(rank_str)[0] + 20), 260), f"{elo}", fill=usercolor, font=font3)
+        draw.text(((font3.getbbox(lvl_str)[0] + 100), 180), f"{lvl}", fill=usercolor, font=font3)
+        draw.text(((font3.getbbox(ldb_str)[0] + 140), 220), f"{ldb}", fill=usercolor, font=font3)
+        draw.text(((font3.getbbox(rank_str)[0] + 90), 260), f"{elo}", fill=usercolor, font=font3)
 
         draw.text((162, 14), f"{nick}", fill=usercolor, font=font2)
         draw.text((162, 40), f"{user.name}#{user.discriminator}", fill=usercolor, font=font1)
@@ -209,7 +209,7 @@ class Leveler(commands.Cog):
                 draw.text((margin, offset), f"{line}...", fill=usercolor, font=font1)
                 break
             draw.text((margin, offset), f"{line}", fill=usercolor, font=font1)
-            offset += font1.getsize(line)[1]
+            offset += font1.getbbox(line)[1]
         temp = BytesIO()
         img.save(temp, format="PNG")
         temp.name = "profile.png"
