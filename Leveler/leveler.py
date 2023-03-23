@@ -30,7 +30,7 @@ class Leveler(commands.Cog):
         self.profiles = UserProfile()
         self.loop = self.bot.loop.create_task(self.start())
         self.restart = True
-        self.defaultrole = _("New")
+        self.defaultrole = _("DAB")
         self._session = aiohttp.ClientSession()
 
     __version__ = "1.0.0"
