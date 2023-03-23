@@ -335,7 +335,7 @@ class Leveler(commands.Cog):
                 and await self.profiles.data.guild(message.guild).lvlup_announce()
             ):
                 await message.channel.send(
-                    _("{} is now level {} !".format(message.author.mention, lvl))
+                    _("The retard, {}, has reached **Shitposter Level {}!**".format(message.author.mention, lvl))
                 )
             await self.profiles._check_exp(message.author)
             await self.profiles._check_role_member(message.author)
