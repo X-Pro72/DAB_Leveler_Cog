@@ -157,7 +157,7 @@ class Leveler(commands.Cog):
         draw = ImageDraw.Draw(img)
         usercolor = (51, 153, 255)  # user.color.to_rgb()
         aviholder = self.add_corners(Image.new("RGBA", (140, 140), (255, 255, 255, 255)), 10)
-        nameplate = self.add_corners(Image.new("RGBA", (180, 90), (0, 0, 0, 255)), 10)
+        nameplate = self.add_corners(Image.new("RGBA", (180, 60), (0, 0, 0, 255)), 10)
         xptot = self.add_corners(Image.new("RGBA", (310, 20), (215, 215, 215, 255)), 10)
         img.paste(aviholder, (10, 10), aviholder)
         img.paste(nameplate, (155, 10), nameplate)
@@ -205,11 +205,11 @@ class Leveler(commands.Cog):
         count = 0
         for line in textwrap.wrap(desc, width=20):
             count += 1
-            if count == 6:
+            if count == 4:
                 draw.text((margin, offset), f"{line}...", fill=usercolor, font=font1)
                 break
             draw.text((margin, offset), f"{line}", fill=usercolor, font=font1)
-            offset += font1.getbbox(line)[1]
+            offset += 20
         temp = BytesIO()
         img.save(temp, format="PNG")
         temp.name = "profile.png"
