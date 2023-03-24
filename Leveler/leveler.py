@@ -230,7 +230,7 @@ class Leveler(commands.Cog):
             "nxp": 100,
             "lvl": 1,
             "minone": 0,
-            "elo": default if default else _("New"),
+            "elo": default if default else _("DAB"),
             "ldb": 0,
             "desc": "",
             "bg": bg,
