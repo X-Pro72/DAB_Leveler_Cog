@@ -194,9 +194,9 @@ class Leveler(commands.Cog):
 
         draw.text((154, 316), f"{lprc}%", fill=usercolor, font=font1)
         draw.text((100, 360), (prog_str + f" {xp}/{nxp}"), fill=usercolor, font=font1)
-        draw.text(((font3.getbbox(lvl_str)[0] + 100), 180), f"{lvl}", fill=usercolor, font=font3)
-        draw.text(((font3.getbbox(ldb_str)[0] + 140), 220), f"{ldb}", fill=usercolor, font=font3)
-        draw.text(((font3.getbbox(rank_str)[0] + 90), 260), f"{elo}", fill=usercolor, font=font3)
+        draw.text(((font3.getbbox(lvl_str)[0] + 90), 180), f"{lvl}", fill=usercolor, font=font3)
+        draw.text(((font3.getbbox(ldb_str)[0] + 125), 220), f"{ldb}", fill=usercolor, font=font3)
+        draw.text(((font3.getbbox(rank_str)[0] + 80), 260), f"{elo}", fill=usercolor, font=font3)
 
         draw.text((162, 14), f"{nick}", fill=usercolor, font=font2)
         draw.text((162, 40), f"{user.name}#{user.discriminator}", fill=usercolor, font=font1)
