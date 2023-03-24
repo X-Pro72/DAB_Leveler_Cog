@@ -200,12 +200,12 @@ class Leveler(commands.Cog):
 
         draw.text((162, 14), f"{nick}", fill=usercolor, font=font2)
         draw.text((162, 40), f"{user.name}#{user.discriminator}", fill=usercolor, font=font1)
-        margin = 162
-        offset = 70
+        margin = 190
+        offset = 180
         count = 0
         for line in textwrap.wrap(desc, width=20):
             count += 1
-            if count == 4:
+            if count == 6:
                 draw.text((margin, offset), f"{line}...", fill=usercolor, font=font1)
                 break
             draw.text((margin, offset), f"{line}", fill=usercolor, font=font1)
