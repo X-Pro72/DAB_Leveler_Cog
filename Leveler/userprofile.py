@@ -11,14 +11,14 @@ class UserProfile:
             "wlchannels": [],
             "blchannels": [],
             "defaultrole": None,
-            "defaultbg": None,
+            "defaultbg": "https://i.imgur.com/K9lgmQS.png",
             "roles": {},
             "database": [],
-            "autoregister": False,
+            "autoregister": True,
             "cooldown": 60.0,
-            "whitelist": True,
+            "whitelist": False,
             "blacklist": False,
-            "lvlup_announce": False
+            "lvlup_announce": True
         }
         default_member = {
             "exp": 0,
